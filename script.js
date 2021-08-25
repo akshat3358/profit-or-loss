@@ -24,22 +24,26 @@ function submitHandler() {
 function calculateProfitAndLoss(initial, quantity, current) {
   if (initial > current) {
     var loss = (initial - current) * quantity;
-    var lossPercentage = (loss / initial) * 100;
+    var lossPercentage = Number.parseFloat((loss / initial) * 100).toFixed(2);
 
     showOutput(
       `Oh Shit!😦, the loss is ${loss} and the percent is ${lossPercentage}%`
     );
+    outputBox.style.backgroundColor = "red";
+    outputBox.style.color = "white";
     photu.innerHTML = "<img src='https://media.giphy.com/media/V4YgEDg3OuElrscJTV/giphy.gif' style='display:block;margin:1.5rem auto 1rem;max-width:350px;max-height:250px;border-radius:15px;'>";
   } else if (current > initial) {
     var profit = (current - initial) * quantity;
-    var profitPercentage = (profit / initial) * 100;
+    var profitPercentage = Number.parseFloat((profit / initial) * 100).toFixed(2);
 
     showOutput(
       `Congratulations!🥳, the profit is ${profit} and the percent is ${profitPercentage}%`
     );
+    outputBox.style.backgroundColor = "green";
+    outputBox.style.color = "white";
     photu.innerHTML = "<img src='https://media.giphy.com/media/3ohfFqNgHB0qOisfdu/giphy.gif' style='display:block;margin:1.5rem auto 1rem;max-width:350px;max-height:250px;border-radius:15px;'>";
   } else {
-    showOutput(`Koi Baat Nahi!!🙂,No pain no gain and no gain no pain`);
+    showOutput(`Koi Baat Nahi!!🙂`);
     photu.innerHTML = "<img src='https://media.giphy.com/media/14cfLnFBT4xDGCgGOm/giphy.gif' style='display:block;margin:1.5rem auto 1rem;max-width:350px;max-height:250px;border-radius:15px;'>";
   }
 }

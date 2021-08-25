@@ -37,7 +37,9 @@ label {
 }
 
 #output-box {
-    padding-top: 1.5rem;
+    padding: 1rem;
     font-weight: 600;
     font-size: 200%;
+    border-radius: 1rem;
+    margin: 1rem;
 }

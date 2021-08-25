@@ -44,6 +44,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
     photu.innerHTML = "<img src='https://media.giphy.com/media/3ohfFqNgHB0qOisfdu/giphy.gif' style='display:block;margin:1.5rem auto 1rem;max-width:350px;max-height:250px;border-radius:15px;'>";
   } else {
     showOutput(`Koi Baat Nahi!!🙂`);
+    outputBox.style.backgroundColor = "yellow";
     photu.innerHTML = "<img src='https://media.giphy.com/media/14cfLnFBT4xDGCgGOm/giphy.gif' style='display:block;margin:1.5rem auto 1rem;max-width:350px;max-height:250px;border-radius:15px;'>";
   }
 }
